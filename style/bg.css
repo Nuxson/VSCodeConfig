@@ -1,0 +1,100 @@
+.wrapper {
+	position: relative;
+	background: #00040e;
+	border-radius: 20px;
+	backdrop-filter: blur(250px);
+	-webkit-backdrop-filter: blur(30px);
+	border: 2px solid rgba(255, 255, 255, 0.05);
+	box-shadow: 0 0 30px rgba(255, 255, 255, 0.05);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	font-size: 1.2rem;
+	overflow: hidden;
+	padding: 30px;
+	flex-direction: column;
+	align-items: flex-start;
+	cursor: none;
+}
+
+/* Общее для всех glow */
+.glow {
+	position: absolute;
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	pointer-events: none;
+	z-index: 0;
+}
+
+/* Следующий за курсором */
+/* #glow-follow {
+	background: radial-gradient(
+		circle,
+		rgba(0, 200, 255, 0.3),
+		transparent 70%
+	);
+	opacity: 0;
+	transform: scale(0.6);
+	transition: top 0.1s ease-out, left 0.1s ease-out, transform 0.3s ease,
+		opacity 0.3s ease;
+} */
+
+#glow-follow {
+	position: absolute;
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	pointer-events: none;
+	z-index: 0;
+	background: radial-gradient(
+		circle,
+		rgba(0, 200, 255, 0.3),
+		transparent 50%
+	);
+	opacity: 0;
+	transform: translate(-50%, -50%) scale(0.6);
+	transition: top 0.05s ease-out, left 0.05s ease-out, transform 0.3s ease,
+		opacity 0.3s ease;
+}
+
+/* Статичный пульсирующий glow с одним цветом */
+.pulse-glow {
+	top: 0;
+	right: 0;
+	background-color: rgba(255, 0, 255, 0.6); /* Один цвет — фиолетовый */
+	transform: translate(30%, -30%);
+	width: 600px; /* Увеличиваем размер */
+	height: 600px; /* Увеличиваем размер */
+	animation: pulseOnly 4s ease-in-out infinite; /* Плавная анимация */
+	opacity: 0.6;
+	filter: blur(250px); /* Размытие */
+}
+
+/* Анимация пульсации с одним цветом */
+@keyframes pulseOnly {
+	0%,
+	100% {
+		transform: translate(30%, -30%) scale(1); /* Минимальное изменение масштаба */
+		opacity: 0.6; /* Стабильная непрозрачность */
+		filter: blur(250px); /* Слабое размытие */
+		background-color: rgba(255, 0, 255, 0.5); /* Один фиолетовый цвет */
+	}
+	50% {
+		transform: translate(30%, -30%) scale(1.05); /* Слабое увеличение масштаба */
+		opacity: 0.65; /* Чуть более высокая непрозрачность */
+		filter: blur(250px); /* Слабое увеличение размытия */
+		background-color: rgba(
+			255,
+			0,
+			255,
+			0.6
+		); /* Немного насыщеннее фиолетовый */
+	}
+}
+
+/* Контент сверху свечения */
+.wrapper > *:not(.glow) {
+	z-index: 1;
+}

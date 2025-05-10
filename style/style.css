@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+body {
+	margin: 0;
+	font-family: "Montserrat", sans-serif;
+	background-color: #00040e;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+}
+
+a {
+	color: rgba(255, 255, 255, 0.788);
+	cursor: none;
+}
+
+h2 {
+	font-weight: bold;
+	font-size: 20px;
+	margin-top: 20px;
+}
+
+h4 {
+	font-size: 16px;
+}
+span {
+	color: #0066cc;
+	font-weight: 700;
+}
+
+.copy-button {
+	background: none;
+	border: none;
+	padding: 1px 3px;
+	color: #0066cc;
+	font: inherit;
+	border-radius: 5px;
+	position: relative;
+	z-index: 1;
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+	transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.copy-button:hover {
+	cursor: none;
+	background: rgb(0, 102, 204);
+	transform: scale(1.05);
+}
+
+.copy-button.glow-absorbed {
+	box-shadow: 0 0 2px #0066cc;
+	background: rgba(0, 128, 255, 0.2);
+}
+
+/* Стили для уведомления */
+.copy-notification {
+	position: fixed;
+	bottom: -50px; /* Начальное положение (скрыто) */
+	left: 50%;
+	transform: translateX(-50%);
+	background: rgba(0, 102, 204, 0.9);
+	color: white;
+	padding: 10px 25px;
+	border-radius: 25px;
+	z-index: 1000;
+	white-space: nowrap;
+	box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+	transition: bottom 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+/* Иконка галочки */
+.copy-notification::before {
+	content: "✓";
+	margin-right: 8px;
+}
