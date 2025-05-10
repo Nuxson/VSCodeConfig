@@ -1,50 +1,38 @@
-body {
-	margin: 0;
-	padding: 0;
-	background-color: #1e1e2e;
-	font-family: "Fira Code", monospace;
-	color: #cdd6f4;
-}
-
-.wrapper {
-	max-width: 900px;
-	margin: 40px auto;
-	padding: 20px;
-	box-sizing: border-box;
-}
-
-h1 {
-	font-size: 24px;
-	color: #89b4fa;
-	margin-bottom: 24px;
-	border-bottom: 1px solid #585b70;
-	padding-bottom: 8px;
-}
-
 table {
-	width: 100%;
-	border-collapse: collapse;
-	background-color: #11111b;
-	border: 1px solid #585b70;
-	border-radius: 12px;
 	overflow: hidden;
+	cursor: default;
+	/* position: relative; */
+	background: rgba(0, 4, 14, 0.5);
+	border-radius: 6px;
+	backdrop-filter: blur(250px);
+	-webkit-backdrop-filter: blur(30px);
+	box-shadow: 0 0 30px rgba(255, 255, 255, 0.05);
+	/* display: flex; */
+	justify-content: center;
+	align-items: center;
+	color: white;
+	font-size: 1.2rem;
+	overflow: hidden;
+	padding: 30px;
+	flex-direction: column;
+	align-items: flex-start;
+	cursor: none;
 }
-
 th,
 td {
-	padding: 12px 16px;
 	text-align: left;
-	border-bottom: 1px solid #313244;
+	padding: 0px 16px 0px 16px;
 }
 
-th {
-	background-color: #181825;
-	color: #cdd6f4;
+/* th {
+	background-color: #0066cc;
+	color: #ffffff;
 	font-weight: bold;
-}
+} */
 
 tr:hover td {
-	background-color: #1e1e2e;
+	background-color: #0080ff33;
+	cursor: default;
 }
 
 .key {
@@ -53,5 +41,5 @@ tr:hover td {
 }
 
 .desc {
-	color: #cdd6f4;
+	color: hsla(0, 0%, 100%, 0.8);
 }

@@ -10,6 +10,10 @@ body {
 	align-items: center;
 	/* overflow: hidden; */
 }
+.page-shortcuts {
+	height: 100vh;
+	/* overflow: hidden; */
+}
 
 a {
 	color: rgba(255, 255, 255, 0.788);
@@ -76,4 +80,8 @@ span {
 .copy-notification::before {
 	content: "✓";
 	margin-right: 8px;
+}
+
+.key {
+	color: #0066cc;
 }

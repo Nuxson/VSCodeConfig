@@ -59,6 +59,14 @@
 		opacity 0.3s ease;
 }
 
+.page-shortcuts #glow-follow {
+	background: radial-gradient(
+		circle,
+		rgba(255, 0, 221, 0.3),
+		transparent 50%
+	);
+}
+
 /* Статичный пульсирующий glow с одним цветом */
 .pulse-glow {
 	top: 0;
@@ -70,6 +78,10 @@
 	animation: pulseOnly 4s ease-in-out infinite; /* Плавная анимация */
 	opacity: 0.6;
 	filter: blur(250px); /* Размытие */
+}
+
+.page-shortcuts .pulse-glow {
+	animation: pulseOnlyShortcut 4s ease-in-out infinite;
 }
 
 /* Анимация пульсации с одним цветом */
@@ -89,6 +101,27 @@
 			255,
 			0,
 			255,
+			0.6
+		); /* Немного насыщеннее фиолетовый */
+	}
+}
+
+@keyframes pulseOnlyShortcut {
+	0%,
+	100% {
+		transform: translate(30%, -30%) scale(1); /* Минимальное изменение масштаба */
+		opacity: 0.6; /* Стабильная непрозрачность */
+		filter: blur(250px); /* Слабое размытие */
+		background-color: rgba(0, 102, 204, 0.5); /* Один фиолетовый цвет */
+	}
+	50% {
+		transform: translate(30%, -30%) scale(1.05); /* Слабое увеличение масштаба */
+		opacity: 0.65; /* Чуть более высокая непрозрачность */
+		filter: blur(250px); /* Слабое увеличение размытия */
+		background-color: rgba(
+			0,
+			102,
+			204,
 			0.6
 		); /* Немного насыщеннее фиолетовый */
 	}
