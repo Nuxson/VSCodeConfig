@@ -12,6 +12,7 @@
 		/>
 		<link rel="stylesheet" href="style/style.css" />
 		<link rel="stylesheet" href="style/bg.css" />
+		<link rel="stylesheet" href="style/code.css" />
 	</head>
 	<body>
 		<div class="wrapper">
@@ -55,8 +56,34 @@
 						target="_blank"
 						rel="noopener noreferrer"
 						class="copy-button"
-						class="copy-button"
 						>Excalidraw</a
+					>
+				</h4>
+				<h4>
+					<a
+						href="https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl"
+						target="_blank"
+						rel="noopener noreferrer"
+						class="copy-button"
+						>WSL</a
+					>
+				</h4>
+				<h4>
+					<a
+						href="https://marketplace.visualstudio.com/items?itemName=wayou.vscode-todo-highlight"
+						target="_blank"
+						rel="noopener noreferrer"
+						class="copy-button"
+						>TODO Highlight</a
+					>
+				</h4>
+				<h4>
+					<a
+						href="https://marketplace.visualstudio.com/items?itemName=hediet.vscode-drawio"
+						target="_blank"
+						rel="noopener noreferrer"
+						class="copy-button"
+						>Draw.io Integration</a
 					>
 				</h4>
 			</div>
@@ -89,6 +116,15 @@
 						rel="noopener noreferrer"
 						class="copy-button"
 						>Material Icon Theme</a
+					>
+				</h4>
+				<h4>
+					<a
+						href="/pages/shortcut.html"
+						target="_blank"
+						rel="noopener noreferrer"
+						class="copy-button"
+						>Горячие клавиши для VS Code</a
 					>
 				</h4>
 			</div>
@@ -144,6 +180,84 @@
 						– ширина табов, значение по умолчанию 2, попробуйте 4.
 					</li>
 				</ul>
+			</div>
+
+			<div class="json-container">
+				<button class="copy-json" onclick="copyJSON()">
+					Скопировать
+				</button>
+				<pre><code id="json-block">
+{
+	"workbench.colorTheme": "Kanagawa Wave",
+	"files.autoSave": "afterDelay",
+	"editor.fontSize": 16,
+	"editor.formatOnSave": true,
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"prettier.useTabs": true,
+	"editor.linkedEditing": true,
+	"prettier.tabWidth": 4,
+	"editor.fontFamily": "Fira Code",
+	"editor.fontLigatures": true,
+	"workbench.iconTheme": "material-icon-theme",
+
+	//Отчеты строчки относительно текущего курсора
+	"editor.lineNumbers": "relative",
+
+	//Настройка excalidraw
+	"excalidraw.workspaceLibraryPath": ".",
+	"excalidraw.theme": "dark",
+
+	//drawio
+	"hediet.vscode-drawio.resizeImages": null,
+
+	//Запрос удаления
+	"explorer.confirmDragAndDrop": true,
+	"explorer.confirmDelete": true,
+
+	//Статус бар снизу
+	"workbench.statusBar.visible": true,
+
+	//Полный путь до открытого файла
+	"breadcrumbs.enabled": false,
+
+	//Отключение панели управления окнами
+	"chat.commandCenter.enabled": false,
+	"window.titleBarStyle": "custom",
+	"workbench.activityBar.location": "hidden",
+	// "window.menuBarVisibility": "toggle"
+
+	//Не показывает открыте вкладки
+	"workbench.editor.showTabs": "single",
+
+	//Плагин todo
+	"todohighlight.isEnable": true,
+	// TODO:
+	// FIXME:
+
+	//Настройка курсора
+	"editor.multiCursorModifier": "ctrlCmd",
+	"editor.cursorBlinking": "phase",
+
+	//Отключение подсказок
+	"workbench.tips.enabled": false,
+
+	//Пустая строчка в конце файла
+	"files.insertFinalNewline": true,
+
+	//Рекомендации по раширениям
+	"extensions.ignoreRecommendations": true,
+
+	// Убираем виджет справа для скролла
+	"editor.scrollbar.horizontal": "hidden",
+	// "editor.scrollbar.vertical": "hidden",
+	"editor.matchBrackets": "never",
+	"editor.occurrencesHighlight": "off",
+	"editor.minimap.enabled": false,
+	"editor.overviewRulerBorder": false,
+	"editor.hideCursorInOverviewRuler": true,
+	"editor.stickyScroll.enabled": false
+}
+				</code></pre>
 			</div>
 		</div>
 

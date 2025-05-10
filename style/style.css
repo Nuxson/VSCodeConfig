@@ -4,11 +4,11 @@ body {
 	margin: 0;
 	font-family: "Montserrat", sans-serif;
 	background-color: #00040e;
-	height: 100vh;
+	/* height: 100vh; */
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	overflow: hidden;
+	/* overflow: hidden; */
 }
 
 a {
@@ -47,13 +47,13 @@ span {
 
 .copy-button:hover {
 	cursor: none;
-	background: rgb(0, 102, 204);
+	background: #0066cc;
 	transform: scale(1.05);
 }
 
 .copy-button.glow-absorbed {
 	box-shadow: 0 0 2px #0066cc;
-	background: rgba(0, 128, 255, 0.2);
+	background: #0080ff33;
 }
 
 /* Стили для уведомления */

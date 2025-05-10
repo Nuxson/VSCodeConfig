@@ -82,6 +82,15 @@ buttons.forEach((btn) => {
 	});
 });
 
+function copyJSON() {
+	const code = document.getElementById("json-block").innerText;
+	navigator.clipboard.writeText(code).then(() => {
+		const btn = document.querySelector(".copy-json");
+		btn.textContent = "Скопировано!";
+		setTimeout(() => (btn.textContent = "Скопировать"), 1500);
+	});
+}
+
 // const glow = document.getElementById("glow-follow");
 // const wrapper = document.querySelector(".wrapper");
 
